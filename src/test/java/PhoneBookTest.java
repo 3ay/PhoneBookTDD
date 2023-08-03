@@ -17,4 +17,18 @@ public class PhoneBookTest {
         int size = phoneBook.add("Alex", "+72328359023");
         Assertions.assertEquals(1, size);
     }
+    @Test
+    public void testAddEqualsPhones() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Alex", "+72328359023");
+        int size = phoneBook.add("Lara", "+72328359023");
+        Assertions.assertEquals(1, size);
+    }
+    @Test
+    public void testAddEqualsNames() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Ivan", "+73338359020");
+        int size = phoneBook.add("Ivan", "+79998359029");
+        Assertions.assertEquals(1, size);
+    }
 }
