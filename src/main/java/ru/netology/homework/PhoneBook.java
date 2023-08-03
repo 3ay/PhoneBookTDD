@@ -32,6 +32,8 @@ public class PhoneBook {
     }
 
     public void printAllNames() {
-        System.out.println("");
+        for (String name : namesMap) {
+            System.out.println(name);
+        }
     }
 }
