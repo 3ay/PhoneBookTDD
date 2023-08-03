@@ -22,12 +22,16 @@ public class PhoneBook {
         }
         return namesMap.size();
     }
-    public String findByNumber(String number)
-    {
+
+    public String findByNumber(String number) {
         return phoneNameMap.get(number);
     }
-    public String findByName(String name)
-    {
+
+    public String findByName(String name) {
         return namePhoneMap.get(name);
+    }
+
+    public void printAllNames() {
+        System.out.println("");
     }
 }
