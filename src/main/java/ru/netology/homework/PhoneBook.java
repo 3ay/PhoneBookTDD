@@ -14,12 +14,16 @@ public class PhoneBook {
         this.namesMap = new TreeSet<>();
     }
 
-    public int add(String name, String phone) {
-        if (!namesMap.contains(name) && !phoneNameMap.containsKey(phone)) {
-            namePhoneMap.put(name, phone);
-            phoneNameMap.put(phone, name);
+    public int add(String name, String number) {
+        if (!namesMap.contains(name) && !phoneNameMap.containsKey(number)) {
+            namePhoneMap.put(name, number);
+            phoneNameMap.put(number, name);
             namesMap.add(name);
         }
         return namesMap.size();
+    }
+    public String findByNumber(String number)
+    {
+        return null;
     }
 }
